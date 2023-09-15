@@ -3,8 +3,9 @@ AMOUNT = 10
 
 plain_text = text.lower()
 
-for i in [',', '.', ';', '[', ']', '(', ')', '-', '—', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '"', '/']:
+for i in [',', '.', ';', '[', ']', '(', ')', '—', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '"', '/']:
     plain_text = plain_text.replace(i, '')
+plain_text = plain_text.replace('  ', ' ')
 
 word_list = plain_text.split(' ')
 word_set = set(word_list)
